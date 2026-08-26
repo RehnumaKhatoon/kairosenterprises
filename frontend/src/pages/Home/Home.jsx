@@ -7,7 +7,7 @@ import ProcessSection from "./components/ProcessSection";
 import IndustriesSection from "./components/IndustriesSection";
 import ProjectsSection from "./components/ProjectsSection";
 import Testimonials from "./components/Testimonials";
-import CTASection from "./components/CTASection";
+import FAQSection from "./components/FAQSection";
 
 const Home = () => {
     return (
@@ -31,7 +31,7 @@ const Home = () => {
             <IndustriesSection />
             <ProjectsSection />
             <Testimonials />
-            <CTASection />
+            <FAQSection />
         </div>
     )
 }
