@@ -32,34 +32,18 @@
     &__brand {
         display: flex;
         align-items: center;
-        gap: 10px;
-        color: #fff !important;
-        font: 700 18px/1 "Manrope";
-        letter-spacing: .08em;
+        width: 152px;
+        height: 46px;
+        overflow: hidden;
 
-        &>span:last-child {
-            display: flex;
-            flex-direction: column;
-            gap: 3px
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            mix-blend-mode: screen;
         }
-
-        small {
-            font: 600 7px "DM Sans";
-            letter-spacing: .34em;
-            color: rgba(255, 255, 255, .55)
-        }
-    }
-
-    &__mark {
-        width: 37px;
-        height: 37px;
-        display: grid;
-        place-items: center;
-        border-radius: 5px;
-        color: $navy;
-        background: $primary;
-        font: 800 21px "Manrope";
-        letter-spacing: -.05em
     }
 
     &__nav {
@@ -164,6 +148,11 @@
     .site-header {
         &__navbar {
             padding: 12px 0
+        }
+
+        &__brand {
+            width: 126px;
+            height: 38px
         }
 
         .navbar-collapse {

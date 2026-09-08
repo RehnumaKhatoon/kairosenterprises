@@ -6,8 +6,8 @@ import WhyChooseUs from "./components/WhyChooseUs";
 import ProcessSection from "./components/ProcessSection";
 import IndustriesSection from "./components/IndustriesSection";
 import ProjectsSection from "./components/ProjectsSection";
-import Testimonials from "./components/Testimonials";
-import FAQSection from "./components/FAQSection";
+import Testimonials from "./components/FAQ";
+import FAQSection from "./components/CTASection";
 
 const Home = () => {
     return (

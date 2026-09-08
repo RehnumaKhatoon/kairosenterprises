@@ -42,7 +42,7 @@ const faqs = [
     number: "04",
     question: "Can you work with an existing app, website or software project?",
     answer:
-      "Yes. We can work with existing digital products and help improve functionality, design, security, performance and overall development processes.",
+      "No. We focus on building new digital products from the ground up, helping businesses turn their ideas into secure, scalable and high-performing solutions.",
   },
   {
     icon: FiHeadphones,

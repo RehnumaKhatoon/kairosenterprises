@@ -5,8 +5,20 @@ import {
   FiPhoneCall,
   FiShoppingCart,
   FiMapPin,
+  FiHeart,
+  FiBookOpen,
+  FiCompass,
+  FiRadio,
 } from "react-icons/fi";
 import Reveal from "./Reveal";
+import matrimonialImage from "../../../assets/images/projects/matrimonial-platform.jpeg";
+import callingImage from "../../../assets/images/projects/calling-platform.jpeg";
+import ecommerceImage from "../../../assets/images/projects/ecommerce-platform.jpeg";
+import healthImage from "../../../assets/images/projects/health-platform.jpeg";
+import astrologyImage from "../../../assets/images/projects/astrology-platform.jpeg";
+import elearningImage from "../../../assets/images/projects/elearning-platform.jpeg";
+import newsImage from "../../../assets/images/projects/news-platform.jpeg";
+import rideImage from "../../../assets/images/projects/ride-platform.jpeg";
 
 const projects = [
   {
@@ -16,6 +28,7 @@ const projects = [
     text: "A feature-rich platform designed to help people discover, connect and find meaningful matches.",
     tags: ["Profiles", "Matching", "Search", "Membership"],
     className: "project--matrimonial",
+    image: matrimonialImage,
   },
   {
     number: "02",
@@ -24,6 +37,7 @@ const projects = [
     text: "A social calling platform designed for direct one-on-one voice and video conversations.",
     tags: ["Voice Calls", "Video Calls", "Match", "Profiles"],
     className: "project--calling",
+    image: callingImage,
   },
   {
     number: "03",
@@ -32,6 +46,7 @@ const projects = [
     text: "A complete online shopping experience connecting customers with products through a seamless digital storefront.",
     tags: ["Products", "Cart", "Payments", "Orders"],
     className: "project--commerce",
+    image: ecommerceImage,
   },
   {
     number: "04",
@@ -40,6 +55,43 @@ const projects = [
     text: "A digital platform designed to simplify ordering, tracking and delivery from business to customer.",
     tags: ["Orders", "Tracking", "Delivery", "Management"],
     className: "project--delivery",
+    image: rideImage,
+  },
+  {
+    number: "05",
+    icon: FiHeart,
+    title: "Healthcare Platform",
+    text: "A patient-focused digital healthcare platform for consultations, care coordination and health services.",
+    tags: ["Consultations", "Patients", "Care", "Health"],
+    className: "project--health",
+    image: healthImage,
+  },
+  {
+    number: "06",
+    icon: FiCompass,
+    title: "Astrology Platform",
+    text: "A personalized platform for users to explore astrology, receive guidance and connect with experts.",
+    tags: ["Horoscope", "Guidance", "Experts", "Insights"],
+    className: "project--astrology",
+    image: astrologyImage,
+  },
+  {
+    number: "07",
+    icon: FiBookOpen,
+    title: "E-Learning Platform",
+    text: "An engaging online learning experience that helps students study, practice and grow at their own pace.",
+    tags: ["Courses", "Learning", "Students", "Progress"],
+    className: "project--learning",
+    image: elearningImage,
+  },
+  {
+    number: "08",
+    icon: FiRadio,
+    title: "News Platform",
+    text: "A modern news platform that brings audiences timely stories, live updates and topics that matter.",
+    tags: ["Live News", "Stories", "Topics", "Updates"],
+    className: "project--news",
+    image: newsImage,
   },
 ];
 
@@ -107,37 +159,41 @@ const ProjectsSection = () => {
 
                 {/* Product visual */}
                 <div className="product-card__visual">
-                  <div className="phone">
+                  {project.image ? (
+                    <img className="project-image" src={project.image} alt={`${project.title} preview`} />
+                  ) : (
+                    <div className="phone">
 
-                    <div className="phone__notch" />
+                      <div className="phone__notch" />
 
-                    <div className="phone__screen">
+                      <div className="phone__screen">
 
-                      <div className="phone__header">
-                        <span />
-                        <span />
+                        <div className="phone__header">
+                          <span />
+                          <span />
+                        </div>
+
+                        <div className="phone__avatar" />
+
+                        <div className="phone__lines">
+                          <i />
+                          <i />
+                          <i />
+                        </div>
+
+                        <div className="phone__blocks">
+                          <i />
+                          <i />
+                          <i />
+                        </div>
+
                       </div>
-
-                      <div className="phone__avatar" />
-
-                      <div className="phone__lines">
-                        <i />
-                        <i />
-                        <i />
-                      </div>
-
-                      <div className="phone__blocks">
-                        <i />
-                        <i />
-                        <i />
-                      </div>
-
                     </div>
-                  </div>
+                  )}
                 </div>
 
                 <a
-                  href="#contact"
+                  href="https://wa.me/919044312362"
                   className="product-card__arrow"
                   aria-label={`View ${project.title}`}
                 >

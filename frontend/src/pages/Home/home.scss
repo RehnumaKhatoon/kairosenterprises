@@ -341,6 +341,192 @@ h2 {
     top: 39%;
   }
 
+  .site-header {
+    position: fixed;
+    inset: 0 0 auto;
+    z-index: 1000;
+    width: 100%;
+    color: #fff;
+    transition: $transition;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 1px;
+      background: rgba(255, 255, 255, .1);
+      transition: $transition
+    }
+
+    &__navbar {
+      padding: 18px 0;
+      background: transparent !important;
+      transition: $transition
+    }
+
+    &__container {
+      max-width: 1320px
+    }
+
+    &__brand {
+      display: flex;
+      align-items: center;
+      width: 152px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+        mix-blend-mode: screen;
+      }
+    }
+
+    &__nav {
+      display: flex;
+      align-items: center;
+      gap: 30px
+    }
+
+    &__link {
+      position: relative;
+      padding: 8px 0;
+      border: 0;
+      background: transparent;
+      color: rgba(255, 255, 255, .72);
+      font: 500 13px "DM Sans";
+      cursor: pointer;
+      transition: $transition;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 3px;
+        width: 0;
+        height: 1px;
+        background: $primary;
+        transition: $transition
+      }
+
+      &:hover {
+        color: #fff;
+
+        &::after {
+          width: 100%
+        }
+      }
+    }
+
+    &__cta {
+      min-height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 21px;
+      border: 0;
+      border-radius: 5px;
+      color: $navy;
+      background: $primary;
+      font-size: 13px;
+      font-weight: 700;
+      transition: $transition;
+
+      svg {
+        transition: $transition
+      }
+
+      &:hover {
+        background: #78f2d3;
+        transform: translateY(-2px);
+
+        svg {
+          transform: translate(3px, -3px)
+        }
+      }
+    }
+
+    &__toggle {
+      width: 44px;
+      height: 42px;
+      padding: 8px;
+      border: 1px solid rgba(255, 255, 255, .2) !important;
+      border-radius: 4px;
+      box-shadow: none !important;
+
+      span {
+        display: block;
+        width: 100%;
+        height: 1px;
+        margin: 5px 0;
+        background: #fff;
+        transition: $transition
+      }
+    }
+
+    &.is-scrolled {
+      background: rgba(7, 17, 31, .9);
+      box-shadow: 0 10px 35px rgba(0, 0, 0, .2);
+      backdrop-filter: blur(16px);
+
+      &::after {
+        background: rgba(255, 255, 255, .06)
+      }
+
+      .site-header__navbar {
+        padding: 10px 0
+      }
+    }
+  }
+
+  @media(max-width:991px) {
+    .site-header {
+      &__navbar {
+        padding: 12px 0
+      }
+
+      &__brand {
+        width: 126px
+      }
+
+      .navbar-collapse {
+        margin: 12px -12px -12px;
+        padding: 18px 22px 24px;
+        border-top: 1px solid rgba(255, 255, 255, .1);
+        background: rgba(7, 17, 31, .98);
+        box-shadow: 0 25px 40px rgba(0, 0, 0, .3)
+      }
+
+      &__nav {
+        align-items: stretch;
+        gap: 4px
+      }
+
+      &__link {
+        text-align: left;
+        padding: 12px 0
+      }
+
+      &__cta {
+        margin-top: 12px
+      }
+
+      .navbar-toggler[aria-expanded="true"] span:nth-child(1) {
+        transform: translateY(6px) rotate(45deg)
+      }
+
+      .navbar-toggler[aria-expanded="true"] span:nth-child(2) {
+        opacity: 0
+      }
+
+      .navbar-toggler[aria-expanded="true"] span:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg)
+      }
+    }
+  }
+
   &--right {
     right: 7%;
     top: 39%;
@@ -1619,9 +1805,10 @@ h2 {
 
 .process {
   position: relative;
-
-  background: $white;
-  color: $navy;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(94, 230, 196, .11), transparent 34%),
+    #07111f;
+  color: #fff;
 
   padding-top: 110px;
   padding-bottom: 110px;
@@ -1666,7 +1853,7 @@ h2 {
   h2 {
     margin: 0;
 
-    color: $navy;
+    color: #fff;
 
     font-family: "Manrope", sans-serif;
     font-size: clamp(38px, 4vw, 52px);
@@ -1686,7 +1873,7 @@ h2 {
 
     margin: 22px auto 0;
 
-    color: #68757c;
+    color: rgba(255, 255, 255, .62);
 
     font-size: 14px;
     line-height: 1.75;
@@ -1809,7 +1996,7 @@ h2 {
 
     border-radius: 50%;
 
-    background: $white;
+    background: #0b1b2b;
 
     border: 1px solid rgba(94, 230, 196, .35);
 
@@ -1819,7 +2006,7 @@ h2 {
 
     box-shadow:
       0 0 0 8px rgba(94, 230, 196, .045),
-      0 12px 30px rgba(7, 17, 31, .06);
+      0 12px 30px rgba(0, 0, 0, .24);
 
     transition: $transition;
 
@@ -1845,7 +2032,7 @@ h2 {
   h3 {
     margin: 0 0 8px;
 
-    color: $navy;
+    color: #fff;
 
     font-family: "Manrope", sans-serif;
 
@@ -1879,7 +2066,7 @@ h2 {
 
     margin: 0 auto;
 
-    color: #707d83;
+    color: rgba(255, 255, 255, .58);
 
     font-size: 13px;
     line-height: 1.7;
@@ -1897,7 +2084,7 @@ h2 {
 
       box-shadow:
         0 0 0 9px rgba(94, 230, 196, .07),
-        0 15px 35px rgba(7, 17, 31, .10);
+        0 15px 35px rgba(0, 0, 0, .38);
     }
   }
 
@@ -1916,14 +2103,14 @@ h2 {
 
     padding: 14px 25px;
 
-    border: 1px solid #dce8e4;
+    border: 1px solid rgba(94, 230, 196, .18);
 
     border-radius: 8px;
 
-    background: $white;
+    background: rgba(255, 255, 255, .055);
 
     box-shadow:
-      0 12px 35px rgba(7, 17, 31, .045);
+      0 12px 35px rgba(0, 0, 0, .24);
 
     &__icon {
       width: 48px;
@@ -1948,7 +2135,7 @@ h2 {
 
       margin-bottom: 3px;
 
-      color: $navy;
+      color: #fff;
 
       font-size: 15px;
       font-weight: 700;
@@ -1957,7 +2144,7 @@ h2 {
     span {
       display: block;
 
-      color: #78848a;
+      color: rgba(255, 255, 255, .58);
 
       font-size: 12px;
     }
@@ -2166,7 +2353,7 @@ h2 {
     border: 1px solid rgba(94, 230, 196, 0.5);
     border-radius: 3px;
     color: $primary;
-    font-size: 8px;
+    font-size: 9px;
     letter-spacing: 0.08em;
   }
 
@@ -2182,7 +2369,7 @@ h2 {
     background: rgba(94, 230, 196, 0.05);
 
     svg {
-      font-size: 15px;
+      font-size: 17px;
     }
   }
 
@@ -2190,14 +2377,14 @@ h2 {
     max-width: 190px;
     margin: 12px 0 7px;
     color: $white;
-    font: 600 17px/1.15 "Manrope", sans-serif;
+    font: 600 20px/1.15 "Manrope", sans-serif;
   }
 
   p {
     max-width: 205px;
     margin: 0;
     color: rgba(255, 255, 255, 0.55);
-    font-size: 9px;
+    font-size: 13px;
     line-height: 1.55;
   }
 
@@ -2212,7 +2399,7 @@ h2 {
       border: 1px solid rgba(94, 230, 196, 0.22);
       border-radius: 20px;
       color: rgba(255, 255, 255, 0.62);
-      font-size: 7px;
+      font-size: 10px;
       line-height: 1;
     }
   }
@@ -2245,7 +2432,7 @@ h2 {
 .phone {
   position: relative;
   width: 100px;
-  height: 190px;
+  height: 250px;
   padding: 5px;
   border: 2px solid rgba(255, 255, 255, 0.65);
   border-radius: 14px;
@@ -2353,6 +2540,17 @@ h2 {
   }
 }
 
+.project-image {
+  width: 150px;
+  height: 250px;
+  display: block;
+  object-fit: cover;
+  object-position: center;
+  border: 2px solid rgba(255, 255, 255, .65);
+  border-radius: 14px;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, .45);
+}
+
 /* Different product visuals */
 
 .project--matrimonial {
@@ -2360,7 +2558,8 @@ h2 {
       #291d2d 0%,
       #161927 100%);
 
-  .phone {
+  .phone,
+  .project-image {
     transform: rotate(5deg);
   }
 }
@@ -2370,7 +2569,8 @@ h2 {
       #09232a 0%,
       #071821 100%);
 
-  .phone {
+  .phone,
+  .project-image {
     transform: rotate(-4deg);
 
     &__avatar {
@@ -2390,7 +2590,8 @@ h2 {
       #0c282c 0%,
       #071b24 100%);
 
-  .phone {
+  .phone,
+  .project-image {
     transform: rotate(4deg);
 
     &__avatar {
@@ -2408,7 +2609,8 @@ h2 {
       #25251e 0%,
       #171a19 100%);
 
-  .phone {
+  .phone,
+  .project-image {
     transform: rotate(-5deg);
 
     &__blocks {
@@ -2426,6 +2628,38 @@ h2 {
         }
       }
     }
+  }
+}
+
+.project--health {
+  background: linear-gradient(135deg, #12303a 0%, #0b1d2a 100%);
+
+  .project-image {
+    transform: rotate(4deg);
+  }
+}
+
+.project--astrology {
+  background: linear-gradient(135deg, #392239 0%, #1e172b 100%);
+
+  .project-image {
+    transform: rotate(-4deg);
+  }
+}
+
+.project--learning {
+  background: linear-gradient(135deg, #152f4d 0%, #101d35 100%);
+
+  .project-image {
+    transform: rotate(4deg);
+  }
+}
+
+.project--news {
+  background: linear-gradient(135deg, #102f59 0%, #111d31 100%);
+
+  .project-image {
+    transform: rotate(-4deg);
   }
 }
 
@@ -2480,6 +2714,11 @@ h2 {
     }
 
     .phone {
+      width: 85px;
+      height: 165px;
+    }
+
+    .project-image {
       width: 85px;
       height: 165px;
     }

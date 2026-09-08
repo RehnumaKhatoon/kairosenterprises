@@ -28,13 +28,13 @@ const HeroContent = ({ reduceMotion, itemVariants }) => {
                     <Col lg={7} xl={7}>
                         <motion.div className="hero__content" initial={reduceMotion ? false : "hidden"} animate="visible" variants={{ visible: { transition: { staggerChildren: 0.11 } } }}>
                             <motion.div className="eyebrow eyebrow--light" variants={itemVariants}>IDEAS <span /> TECHNOLOGY <span /> GROWTH</motion.div>
-                            <motion.h1 className="hero__title" variants={itemVariants}>The right time to build your next <em>digital product is now.</em></motion.h1>
+                            <motion.h1 className="hero__title" variants={itemVariants}>The right time to build your next <em>Digital Product is now.</em></motion.h1>
                             <motion.p className="hero__description" variants={itemVariants}>From websites and mobile apps to complete digital platforms, we turn business ideas into practical, scalable technology designed to help you launch, grow and succeed.</motion.p>
                             <motion.div className="hero__buttons" variants={itemVariants}>
                                 <a href="#services" className="button button--primary">Build Your Idea <FiArrowUpRight /></a>
                                 <a href="#contact" className="button button--ghost">Let’s Talk <FiArrowUpRight /></a>
                             </motion.div>
-                            <motion.div className="hero__proof" variants={itemVariants}><div className="hero__avatars" aria-hidden="true"><span>AK</span><span>MS</span><span>RJ</span></div><p><strong>Trusted delivery, human partnership.</strong><br />Built for teams ready to grow.</p></motion.div>
+                            {/* <motion.div className="hero__proof" variants={itemVariants}><div className="hero__avatars" aria-hidden="true"><span>AK</span><span>MS</span><span>RJ</span></div><p><strong>Trusted delivery, human partnership.</strong><br />Built for teams ready to grow.</p></motion.div> */}
                         </motion.div>
                     </Col>
                     {/* <Col lg={5} xl={5}>

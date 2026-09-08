@@ -4,8 +4,9 @@ import {
     FaLinkedinIn,
     FaInstagram,
     FaWhatsapp,
-    FaXTwitter,
+    FaFacebookF,
 } from "react-icons/fa6";
+import footerLogo from "../../../assets/images/logo/kairos-footer-logo.png";
 
 import "@/styles/components/layout/footer.scss";
 
@@ -22,7 +23,9 @@ const Footer = () => {
                         <Col lg={4} md={6}>
                             <div className="site-footer__brand">
 
-                                <Link to="/" className="site-footer__logo"><b>K</b><span>KAIROS<small>ENTERPRISES</small></span></Link>
+                                <Link to="/" className="site-footer__logo" aria-label="Kairos Enterprises home">
+                                    <img src={footerLogo} alt="Kairos Enterprises" />
+                                </Link>
 
                                 <p className="site-footer__description">
                                     Purpose-built digital experiences and technology that help ambitious businesses move forward.
@@ -31,31 +34,31 @@ const Footer = () => {
                                 <div className="site-footer__social">
 
                                     <a
-                                        href="https://www.linkedin.com/"
+                                        href="https://www.linkedin.com/in/kairos-enterprises-36a187433/"
                                         aria-label="LinkedIn"
                                     >
                                         <FaLinkedinIn />
                                     </a>
 
                                     <a
-                                        href="https://www.instagram.com/"
+                                        href="https://www.instagram.com/kairos_enterprises_official?stkn=aWdmZWg3bWV4Ymp1"
                                         aria-label="Instagram"
                                     >
                                         <FaInstagram />
                                     </a>
 
                                     <a
-                                        href="https://wa.me/919999999999"
+                                        href="https://wa.me/919044312362"
                                         aria-label="Whatsapp"
                                     >
                                         <FaWhatsapp />
                                     </a>
 
                                     <a
-                                        href="https://x.com/"
-                                        aria-label="X"
+                                        href="https://www.facebook.com/share/1DK117Mtt9/"
+                                        aria-label="Facebook"
                                     >
-                                        <FaXTwitter />
+                                        <FaFacebookF />
                                     </a>
 
                                 </div>
@@ -71,7 +74,7 @@ const Footer = () => {
 
                                 <ul>
                                     <li>
-                                        <a href="/#about">About</a>
+                                        <a href="/#about">About Us</a>
                                     </li>
 
                                     <li>
@@ -127,12 +130,17 @@ const Footer = () => {
 
                                 <div className="site-footer__contact">
 
-                                    <a href="mailto:info@kairosenterprises.com">
-                                        info@kairosenterprises.com
+                                    <a href="mailto:kairos.techsupport@gmail.com">
+                                        kairos.techsupport@gmail.com
                                     </a>
 
-                                    <a href="tel:+919999999999">
-                                        +91 99999 99999
+                                    <a
+                                        href="https://wa.me/919044312362"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="footer-whatsapp"
+                                    >
+                                        +91 9044312362
                                     </a>
 
                                     <p>
@@ -161,7 +169,11 @@ const Footer = () => {
                             All rights reserved.
                         </p>
 
-                        <div className="site-footer__legal"><a href="mailto:info@kairosenterprises.com">Made for meaningful progress.</a></div>
+                        <div className="site-footer__legal">
+                            <a href="/legal/terms-and-conditions.pdf" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>
+                            <a href="/legal/privacy-policy.pdf" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                            <a href="mailto:info@kairosenterprises.com">Made for meaningful progress.</a>
+                        </div>
 
                     </div>
 

@@ -42,7 +42,7 @@ const CTASection = () => (
             </a>
 
             <a
-              href="tel:+919999999999"
+              href="https://wa.me/919044312362"
               className="button button--outline"
             >
               <FiMessageCircle />

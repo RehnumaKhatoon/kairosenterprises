@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import { Link, useLocation } from "react-router-dom";
 import { FiArrowUpRight } from "react-icons/fi";
+import kairosLogo from "../../../assets/images/logo/kairos-enterprises-logo.png";
 
 import "../../../styles/components/layout/header.scss";
 
@@ -36,12 +37,12 @@ const Header = () => {
             <Navbar expand="lg" expanded={expanded} onToggle={setExpanded} className="site-header__navbar">
                 <Container className="site-header__container">
                     <Navbar.Brand as={Link} to="/" className="site-header__brand" aria-label="Kairos Enterprises home">
-                        <span className="site-header__mark">K</span><span>KAIROS<small>ENTERPRISES</small></span>
+                        <img src={kairosLogo} alt="Kairos Enterprises" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="kairos-navbar" className="site-header__toggle"><span /><span /><span /></Navbar.Toggle>
                     <Navbar.Collapse id="kairos-navbar">
                         <Nav className="site-header__nav ms-auto">
-                            {[['home', 'Home'], ['about', 'About'], ['services', 'Services'], ['industries', 'Industries'], ['projects', 'Projects'], ['faq', 'FAQ']].map(([id, label]) => <button key={id} type="button" onClick={() => go(id)} className="site-header__link">{label}</button>)}
+                            {[['home', 'Home'], ['about', 'About Us'], ['services', 'Services'], ['industries', 'Industries'], ['projects', 'Projects'], ['faq', 'FAQ\'s']].map(([id, label]) => <button key={id} type="button" onClick={() => go(id)} className="site-header__link">{label}</button>)}
                             <button type="button" onClick={() => go("contact")} className="site-header__cta">Let’s talk <FiArrowUpRight /></button>
                         </Nav>
                     </Navbar.Collapse>

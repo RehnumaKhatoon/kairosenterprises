@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 
 import MainLayout from "../components/layout/MainLayout/Mainlayout";
 import Home from "../pages/Home/Home";
-import Contact from "../pages/Contact/Contact";
+// import Contact from "../pages/Contact/Contact";
 // import About from "../pages/Home/components/AboutPreview";
 // import Services from "../pages/Home/components/ServicesSection";
 // import WhyChooseUs from "../pages/Home/components/WhyChooseUs";
@@ -20,7 +20,7 @@ const AppRoutes = () => {
             </Route> */}
             <Route element={<MainLayout />}>
                 <Route path="/" element={<Home />} />
-                <Route path="/contact" element={<Contact />} />
+                {/* <Route path="/contact" element={<Contact />} /> */}
                 <Route path="*" element={<Home />} />
 
             </Route>
