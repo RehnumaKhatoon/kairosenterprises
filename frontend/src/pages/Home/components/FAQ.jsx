@@ -13,6 +13,7 @@ import {
 import { FaRocket } from "react-icons/fa6";
 
 import Reveal from "./Reveal";
+import kairosMark from "../../../assets/images/logo/kairos-mark.png";
 
 const faqs = [
   {
@@ -102,7 +103,7 @@ const FAQ = () => {
                 <div className="faq-orbit__ring faq-orbit__ring--two" />
 
                 <div className="faq-orbit__core">
-                  K
+                  <img src={kairosMark} alt="" />
                 </div>
 
                 <span className="faq-orbit__dot faq-orbit__dot--one" />

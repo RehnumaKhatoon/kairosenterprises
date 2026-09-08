@@ -11,25 +11,25 @@ import { FaRocket } from "react-icons/fa6";
 
 const steps = [
     [
-        "01",
+        "Step 1",
         "Discover",
         "We understand your idea, business goals and what you want to achieve.",
         FiSearch,
     ],
     [
-        "02",
+        "Step 2",
         "Plan",
         "We define the features, scope and technology needed to turn your idea into a clear plan.",
         FiClipboard,
     ],
     [
-        "03",
+        "Step 3",
         "Build",
         "Our team designs, develops and tests your product with regular communication along the way.",
         FiCode,
     ],
     [
-        "04",
+        "Step 4",
         "Launch & Grow",
         "We launch your product, support you after release and help you improve as your business grows.",
         FaRocket,

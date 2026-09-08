@@ -6,6 +6,7 @@ import {
     FiHeadphones,
 } from "react-icons/fi";
 import Reveal from "./Reveal";
+import kairosMark from "../../../assets/images/logo/kairos-mark.png";
 
 const features = [
     {
@@ -81,7 +82,7 @@ const WhyChooseUs = () => {
                                     </div>
 
                                     <div className="why-visual__core">
-                                        K
+                                        <img src={kairosMark} alt="Kairos Enterprises" />
                                     </div>
 
                                     <i className="dot dot--green" />

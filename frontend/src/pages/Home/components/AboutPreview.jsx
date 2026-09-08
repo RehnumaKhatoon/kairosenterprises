@@ -16,6 +16,7 @@ import {
 } from "react-icons/fi";
 
 import Reveal from "./Reveal";
+import kairosMark from "../../../assets/images/logo/kairos-mark.png";
 
 const AboutPreview = () => {
     return (
@@ -48,7 +49,7 @@ const AboutPreview = () => {
                                 {/* Center */}
                                 <div className="about-visual__center">
                                     <div className="about-visual__logo">
-                                        K
+                                        <img src={kairosMark} alt="Kairos Enterprises" />
                                     </div>
                                 </div>
 

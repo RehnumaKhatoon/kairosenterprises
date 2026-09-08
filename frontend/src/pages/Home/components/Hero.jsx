@@ -9,6 +9,7 @@ import {
     FiZap,
     FiTrendingUp,
 } from "react-icons/fi";
+import kairosMark from "../../../assets/images/logo/kairos-mark.png";
 
 const Hero = () => {
     const reduceMotion = useReducedMotion();
@@ -75,7 +76,7 @@ const HeroContent = ({ reduceMotion, itemVariants }) => {
                             {/* Center */}
                             <div className="process-center">
                                 <div className="process-center__logo">
-                                    K
+                                    <img src={kairosMark} alt="Kairos Enterprises" />
                                 </div>
 
                                 <h3>KAIROS</h3>
