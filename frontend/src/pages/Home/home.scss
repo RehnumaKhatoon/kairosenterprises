@@ -2333,7 +2333,8 @@ h2 {
 
     .product-card__arrow {
       color: $primary;
-      transform: rotate(45deg);
+      border-color: $primary;
+      background: rgba(94, 230, 196, .1);
     }
   }
 
@@ -2422,7 +2423,13 @@ h2 {
     right: 13px;
     z-index: 5;
     color: $primary;
-    font-size: 17px;
+    padding: 5px 8px;
+    border: 1px solid rgba(94, 230, 196, .42);
+    border-radius: 3px;
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
     transition: $transition;
   }
 }

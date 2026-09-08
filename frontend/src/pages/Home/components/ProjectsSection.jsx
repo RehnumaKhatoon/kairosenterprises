@@ -1,6 +1,5 @@
 import { Container } from "react-bootstrap";
 import {
-  FiArrowUpRight,
   FiUsers,
   FiPhoneCall,
   FiShoppingCart,
@@ -195,9 +194,9 @@ const ProjectsSection = () => {
                 <a
                   href="https://wa.me/919044312362"
                   className="product-card__arrow"
-                  aria-label={`View ${project.title}`}
+                  aria-label={`Request a demo for ${project.title}`}
                 >
-                  <FiArrowUpRight />
+                  Demo
                 </a>
               </Reveal>
             );

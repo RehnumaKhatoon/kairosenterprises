@@ -115,7 +115,7 @@ const Footer = () => {
                                     </li>
 
                                     <li>
-                                        <a href="/#services">Cloud &amp; DevOps</a>
+                                        <a href="/#services">UI &amp; UX</a>
                                     </li>
                                 </ul>
 
