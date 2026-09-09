@@ -42,7 +42,7 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="kairos-navbar" className="site-header__toggle"><span /><span /><span /></Navbar.Toggle>
                     <Navbar.Collapse id="kairos-navbar">
                         <Nav className="site-header__nav ms-auto">
-                            {[['home', 'Home'], ['about', 'About Us'], ['services', 'Services'], ['industries', 'Industries'], ['projects', 'Projects'], ['faq', 'FAQ\'s']].map(([id, label]) => <button key={id} type="button" onClick={() => go(id)} className="site-header__link">{label}</button>)}
+                            {[['home', 'Home'], ['about', 'About Us'], ['projects', 'Projects'], ['industries', 'Industries'], ['services', 'Services'], ['faq', 'FAQ\'s']].map(([id, label]) => <button key={id} type="button" onClick={() => go(id)} className="site-header__link">{label}</button>)}
                             <button type="button" onClick={() => go("contact")} className="site-header__cta">Let’s talk <FiArrowUpRight /></button>
                         </Nav>
                     </Navbar.Collapse>

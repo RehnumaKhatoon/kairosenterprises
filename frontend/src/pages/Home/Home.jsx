@@ -25,11 +25,11 @@ const Home = () => {
             </Helmet>
             <Hero />
             <AboutPreview />
-            <ServicesSection />
+            <ProjectsSection />
             <WhyChooseUs />
             <ProcessSection />
             <IndustriesSection />
-            <ProjectsSection />
+            <ServicesSection />
             <Testimonials />
             <FAQSection />
         </div>

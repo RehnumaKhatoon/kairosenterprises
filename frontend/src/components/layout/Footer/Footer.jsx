@@ -78,13 +78,15 @@ const Footer = () => {
                                     </li>
 
                                     <li>
-                                        <a href="/#services">Services</a>
-                                    </li>
-
-                                    <li>
                                         <a href="/#projects">Projects</a>
                                     </li>
 
+                                    <li>
+                                        <a href="/#services">Services</a>
+                                    </li>
+                                    <li>
+                                        <a href="/#faq">FAQ</a>
+                                    </li>
                                     <li>
                                         <a href="/#contact">Contact</a>
                                     </li>
@@ -170,8 +172,8 @@ const Footer = () => {
                         </p>
 
                         <div className="site-footer__legal">
-                            <a href="/legal/terms-and-conditions.pdf" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>
-                            <a href="/legal/privacy-policy.pdf" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                            <a href="/legal/Terms_and_Conditions.pdf" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a>
+                            <a href="/legal/Privacy_Policy.pdf" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
                             <a href="mailto:info@kairosenterprises.com">Made for meaningful progress.</a>
                         </div>
 
